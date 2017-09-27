@@ -12,10 +12,10 @@ public class Main {
             System.out.println("Нет аргуметов");
         }
         else if (args.length==1){
-            sayHellow.getHello(args[0], sayHellow.getZone(args[0]));
+            sayHellow.printHello(args[0], sayHellow.getZone(args[0]));
         }
         else if (args.length==2){
-            sayHellow.getHello(args[0],args[1] );
+            sayHellow.printHello(args[0],args[1] );
         }
         String os = System.getProperty("os.name").toLowerCase();
 

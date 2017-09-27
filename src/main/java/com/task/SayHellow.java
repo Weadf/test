@@ -6,6 +6,10 @@ import java.util.ResourceBundle;
 import java.util.TimeZone;
 
 public class SayHellow {
+    public  SayHellow(){
+
+    }
+
 
     public  String getZone(String city){
         String[] arrayZone = TimeZone.getAvailableIDs();
