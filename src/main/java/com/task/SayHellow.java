@@ -19,7 +19,7 @@ public class SayHellow {
         return result;
     }
 
-    public  void  getHello(String city, String tZone) {
+    public  void  printHello(String city, String tZone) {
         String greeting="";
         Date dataCurrent=new Date();
         System.out.println(dataCurrent);
