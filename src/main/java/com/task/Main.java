@@ -12,6 +12,6 @@ public class Main {
         } else if (args.length == 2) {
             sayHellow.printHello(args[0], args[1]);
         }
-        String os = System.getProperty("os.name").toLowerCase();
+        //String os = System.getProperty("os.name").toLowerCase();
     }
 }
