@@ -20,5 +20,9 @@ public class Main {
             sayHellow = new SayHellow(args[0], args[1]);
             sayHellow.printHello();
         }
+<<<<<<< HEAD
+=======
+        //String os = System.getProperty("os.name").toLowerCase();
+>>>>>>> d2edc9731eede9213ba22ada90dd8bfadf42925e
     }
 }
