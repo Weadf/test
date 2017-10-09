@@ -13,9 +13,6 @@ import org.junit.Test;
 public class SayHellowTest  {
 
 
-    public SayHellowTest() {
-    }
-
     @BeforeClass
     public static void allTestsStarted() {
         System.out.println("All tests started");

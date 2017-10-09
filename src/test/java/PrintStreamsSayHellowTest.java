@@ -164,8 +164,8 @@ public class PrintStreamsSayHellowTest {
         Locale.setDefault(new Locale("en"));
         SayHellow instance = new SayHellow(city);
         Calendar cal = Calendar.getInstance();
-        cal.set(Calendar.HOUR_OF_DAY,0);
-        cal.set(Calendar.MINUTE,0);
+        cal.set(Calendar.HOUR_OF_DAY,23);
+        cal.set(Calendar.MINUTE,30);
         cal.set(Calendar.SECOND,0);
         instance.dataNewZone = cal.getTime();
         instance.printHello();
