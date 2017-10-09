@@ -1,14 +1,9 @@
 import com.task.SayHellow;
-
 import org.junit.After;
-
-
 import org.junit.Before;
 import org.junit.Test;
 import java.io.ByteArrayOutputStream;
-
 import java.io.PrintStream;
-
 import java.util.Calendar;
 import java.util.Locale;
 
