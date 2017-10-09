@@ -48,7 +48,7 @@ public class SayHellow {
             //greeting= new String(greeting.getBytes("ISO-8859-1"), "UTF-8");
         } else if (temp < 19) {
             greeting = mybundle.getString("afternoon");
-            greeting= new String(greeting.getBytes("ISO-8859-1"), "UTF-8");
+           // greeting= new String(greeting.getBytes("ISO-8859-1"), "UTF-8");
 
         } else {
             greeting = mybundle.getString("evening");
