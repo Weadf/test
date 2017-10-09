@@ -46,7 +46,7 @@ public class PrintStreamsSayHellowTest {
     @Test
     public void testPrinHellowRu() throws UnsupportedEncodingException {
         String city = "New York";
-        Locale.setDefault(new Locale("ru_RU"));
+        Locale.setDefault(new Locale("ru", "RU"));
         SayHellow instance = new SayHellow(city);
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY, 18);
