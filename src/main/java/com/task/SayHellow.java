@@ -40,18 +40,18 @@ public class SayHellow {
         int temp = calendar.get(Calendar.HOUR_OF_DAY);
 
         ResourceBundle mybundle = ResourceBundle.getBundle("Locales_");
-        if (temp < 6) {
-            greeting = mybundle.getString("night");
+        if (temp >=19& temp<23) {
+            greeting = mybundle.getString("evening");
 
-        } else if (temp < 9) {
+        } else if (temp >=6& temp<9) {
             greeting = mybundle.getString("morning");
 
-        } else if (temp < 19) {
+        } else if (temp >=9& temp<19) {
             greeting = mybundle.getString("afternoon");
 
 
         } else {
-            greeting = mybundle.getString("evening");
+            greeting = mybundle.getString("night");
 
         }
         System.out.print(greeting + ", " + city + "!");
