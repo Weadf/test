@@ -30,9 +30,9 @@ public class PrintStreamsSayHellowTest {
     }
 
     @Test
-    public void testPrinDayEn() throws UnsupportedEncodingException {
+    public void testPrinDayDefault() throws UnsupportedEncodingException {
         String city ="New York";
-        Locale.setDefault(new Locale("en"));
+        Locale.setDefault(Locale.GERMAN);
         SayHellow instance = new SayHellow(city);
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY,18);
@@ -73,9 +73,9 @@ public class PrintStreamsSayHellowTest {
     }
 
     @Test
-    public void testPrinMorningEn() throws UnsupportedEncodingException {
+    public void testPrinMorningDefault() throws UnsupportedEncodingException {
         String city ="New York";
-        Locale.setDefault(new Locale("en"));
+        Locale.setDefault(Locale.ITALIAN);
         SayHellow instance = new SayHellow(city);
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY,8);
@@ -113,6 +113,92 @@ public class PrintStreamsSayHellowTest {
         instance.dataNewZone = cal.getTime();
         instance.printHello();
         Assert.assertEquals("Доброе утро, New York!", output.toString());
+    }
+
+    @Test
+    public void testPrinEveningDefault() throws UnsupportedEncodingException {
+        String city ="New York";
+        Locale.setDefault(Locale.JAPANESE);
+        SayHellow instance = new SayHellow(city);
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY,19);
+        cal.set(Calendar.MINUTE,30);
+        cal.set(Calendar.SECOND,0);
+        instance.dataNewZone = cal.getTime();
+        instance.printHello();
+        Assert.assertEquals("Good evening, New York!", output.toString());
+    }
+
+    @Test
+    public void testPrinEveningRu() throws UnsupportedEncodingException {
+        String city = "New York";
+        Locale.setDefault(new Locale("ru", "RU"));
+        SayHellow instance = new SayHellow(city);
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 19);
+        cal.set(Calendar.MINUTE, 30);
+        cal.set(Calendar.SECOND, 0);
+        instance.dataNewZone = cal.getTime();
+        instance.printHello();
+        Assert.assertEquals("Добрый вечер, New York!", output.toString());
+    }
+
+
+    @Test
+    public void testPrinEveningUA() throws UnsupportedEncodingException {
+        String city = "New York";
+        Locale.setDefault(new Locale("ru", "UA"));
+        SayHellow instance = new SayHellow(city);
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 19);
+        cal.set(Calendar.MINUTE, 30);
+        cal.set(Calendar.SECOND, 0);
+        instance.dataNewZone = cal.getTime();
+        instance.printHello();
+        Assert.assertEquals("Добрый вечер, New York!", output.toString());
+    }
+
+    @Test
+    public void testPrinNightDefault() throws UnsupportedEncodingException {
+        String city ="New York";
+        Locale.setDefault(new Locale("en"));
+        SayHellow instance = new SayHellow(city);
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY,0);
+        cal.set(Calendar.MINUTE,0);
+        cal.set(Calendar.SECOND,0);
+        instance.dataNewZone = cal.getTime();
+        instance.printHello();
+        Assert.assertEquals("Good night, New York!", output.toString());
+    }
+
+    @Test
+    public void testPrinNightRu() throws UnsupportedEncodingException {
+        String city = "New York";
+        Locale.setDefault(new Locale("ru", "RU"));
+        SayHellow instance = new SayHellow(city);
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        instance.dataNewZone = cal.getTime();
+        instance.printHello();
+        Assert.assertEquals("Доброй ночи, New York!", output.toString());
+    }
+
+
+    @Test
+    public void testPrinNightUA() throws UnsupportedEncodingException {
+        String city = "New York";
+        Locale.setDefault(new Locale("ru", "UA"));
+        SayHellow instance = new SayHellow(city);
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        instance.dataNewZone = cal.getTime();
+        instance.printHello();
+        Assert.assertEquals("Доброй ночи, New York!", output.toString());
     }
 
 }
