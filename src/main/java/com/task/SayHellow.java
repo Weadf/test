@@ -42,17 +42,17 @@ public class SayHellow {
         ResourceBundle mybundle = ResourceBundle.getBundle("Locales_");
         if (temp < 6) {
             greeting = mybundle.getString("night");
-           // greeting= new String(greeting.getBytes("ISO-8859-1"), "UTF-8");
+
         } else if (temp < 9) {
             greeting = mybundle.getString("morning");
-            //greeting= new String(greeting.getBytes("ISO-8859-1"), "UTF-8");
+
         } else if (temp < 19) {
             greeting = mybundle.getString("afternoon");
-           // greeting= new String(greeting.getBytes("ISO-8859-1"), "UTF-8");
+
 
         } else {
             greeting = mybundle.getString("evening");
-           // greeting= new String(greeting.getBytes("ISO-8859-1"), "UTF-8");
+
         }
         System.out.print(greeting + ", " + city + "!");
     }
