@@ -33,7 +33,7 @@ public class SayHellow {
         return result;
     }
 
-    public void printHello() throws UnsupportedEncodingException {
+    public void printHello()  {
         String greeting = "";
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(dataNewZone);
