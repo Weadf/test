@@ -38,7 +38,6 @@ public class SayHellow {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(dataNewZone);
         int temp = calendar.get(Calendar.HOUR_OF_DAY);
-        System.out.println(dataNewZone);
 
         ResourceBundle mybundle = ResourceBundle.getBundle("Locales_");
         if (temp < 6) {
