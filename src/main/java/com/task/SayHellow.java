@@ -54,6 +54,6 @@ public class SayHellow {
             greeting = mybundle.getString("evening");
            // greeting= new String(greeting.getBytes("ISO-8859-1"), "UTF-8");
         }
-        System.out.println(greeting + ", " + city + "!");
+        System.out.print(greeting + ", " + city + "!");
     }
 }

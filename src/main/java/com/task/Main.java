@@ -9,7 +9,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        Locale.setDefault(new Locale("en"));
+
         SayHellow sayHellow;
         if (args.length == 0) {
             System.out.println("There are no arguments.");
